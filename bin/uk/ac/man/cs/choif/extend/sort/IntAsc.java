@@ -12,7 +12,7 @@ public class IntAsc implements Comparator {
 public IntAsc() {
 	super();
 }
-public int doCompare(Object arg1, Object arg2) {
+public int compare(Object arg1, Object arg2) {
 	final int v1 = ((Integer) arg1).intValue();
 	final int v2 = ((Integer) arg2).intValue();
 

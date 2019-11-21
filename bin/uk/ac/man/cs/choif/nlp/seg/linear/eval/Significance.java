@@ -24,7 +24,7 @@ public class Significance {
 			range = (String) v.elementAt(0);
 			experiment = Integer.valueOf((String) v.elementAt(1)).intValue();
 		}
-		public int doCompare (Object a, Object b) {
+		public int compare (Object a, Object b) {
 			final SampleSet s1 = (SampleSet) a;
 			final SampleSet s2 = (SampleSet) b;
 			final int stringComp = s1.range.compareTo(s2.range);

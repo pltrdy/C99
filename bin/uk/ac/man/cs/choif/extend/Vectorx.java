@@ -2,7 +2,8 @@ package uk.ac.man.cs.choif.extend;
 
 import uk.ac.man.cs.choif.extend.sort.*;
 import java.util.*;
-import sun.misc.*;
+//import sun.misc.*;
+
 /**
  * Functions for list manipulation
  * Creation date: (07/18/99 11:23:07)
@@ -111,10 +112,10 @@ public static Vector permutations(Vector V, int n) {
  * @param v java.util.Vector
  * @param compare sun.misc.Compare
  */
-public final static Vector sort(final Vector v, final Comparator compare) {
+public final static Vector sort(final Vector v, final uk.ac.man.cs.choif.extend.sort.Comparator compare) {
 	Object[] a = new Object[v.size()];
 	v.copyInto(a);
-	Sort.quicksort(a, compare);
+	java.util.Arrays.sort(a, compare);
 	return Arrayx.toVector(a);
 }
 /**

@@ -1,7 +1,8 @@
 package uk.ac.man.cs.choif.extend;
 
 import java.util.Vector;
-import sun.misc.Sort;
+import java.util.Arrays;
+// import sun.misc.Sort;
 import uk.ac.man.cs.choif.extend.sort.*;
 /**
  * 
@@ -189,7 +190,8 @@ public final static int[] series(int start, int step, int end) {
  * @param order uk.ac.man.cs.choif.extend.sort.Comparator
  */
 public final static void sort(Object[] array, final Comparator order) {
-	Sort.quicksort(array, order);
+	// Sort.quicksort(array, order);
+        java.util.Arrays.sort(array, order);
 }
 /**
  * Sort a list of integers (ascending order).

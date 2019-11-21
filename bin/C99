@@ -1,4 +1,4 @@
 #!/bin/bash
 # Segment text with C99
-
+cd /home/pltrdy/ubiqus_data/autoalign/C99/bin
 java -ms20M -mx100M uk.ac.man.cs.choif.nlp.seg.linear.C99 $@

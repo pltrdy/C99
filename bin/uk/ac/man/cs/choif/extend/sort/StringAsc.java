@@ -12,7 +12,7 @@ public class StringAsc implements Comparator {
 public StringAsc() {
 	super();
 }
-public int doCompare(Object arg1, Object arg2) {
+public int compare(Object arg1, Object arg2) {
 	return ((String) arg1).compareTo((String) arg2);
 }
 }

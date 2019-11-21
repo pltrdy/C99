@@ -37,7 +37,7 @@ public class Document {
  * @param in java.io.InputStream
  * @param options Set
  */
-public Document(java.io.InputStream in, Set options) {
+public Document(java.io.InputStream in, uk.ac.man.cs.choif.extend.structure.Set options) {
 	Sentences S = new RawText(in);
 	initialise(S, options);
 }
@@ -47,7 +47,7 @@ public Document(java.io.InputStream in, Set options) {
  * @param filename java.lang.String
  * @param options Set
  */
-public Document(String filename, Set options) {
+public Document(String filename, uk.ac.man.cs.choif.extend.structure.Set options) {
 	Sentences S = new RawText(filename);
 	initialise(S, options);
 }
@@ -57,7 +57,7 @@ public Document(String filename, Set options) {
  * @param T uk.ac.man.cs.choif.nlp.doc.basic.Sentences
  * @param options Set
  */
-public Document(Sentences T, Set options) {
+public Document(Sentences T, uk.ac.man.cs.choif.extend.structure.Set options) {
 	initialise(T, options);
 }
 /**
@@ -145,7 +145,7 @@ private void generateDistanceModel() {
  * Creation date: (08/15/99 06:21:17)
  * @param T uk.ac.man.cs.choif.nlp.doc.basic.Sentences
  */
-private void initialise(Sentences T, Set options) {
+private void initialise(Sentences T, uk.ac.man.cs.choif.extend.structure.Set options) {
 	Debugx.msg("Document", "Constructing sentences...");
 	constructSentences(T);
 	if (options.member(STEM)) {

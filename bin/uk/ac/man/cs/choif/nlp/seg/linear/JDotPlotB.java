@@ -173,7 +173,7 @@ public static void main(String[] args) {
 	arg.displayHelp();
 
 	Debugx.msg("JDotPlotB", "Loading document...");
-	Set options = new Set();
+	uk.ac.man.cs.choif.extend.structure.Set options = new uk.ac.man.cs.choif.extend.structure.Set();
 	options.put(Document.STEM);
 	//options.put(Document.POS);
 	Document D = new Document(System.in, options);

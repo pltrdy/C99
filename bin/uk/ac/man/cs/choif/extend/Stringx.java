@@ -7,7 +7,7 @@ import java.util.*;
  * Creation date: (07/18/99 11:16:17)
  * @author: Freddy Choi
  */
-public class Stringx implements sun.misc.Compare {
+public class Stringx implements java.util.Comparator {
 	public final static String[] commonPrefix = new String[]{"re", "un"};
 /**
  * String compare for use with sort.
@@ -16,6 +16,10 @@ public class Stringx implements sun.misc.Compare {
  * @param x java.lang.Object
  * @param y java.lang.Object
  */
+public int compare(Object x, Object y) {
+	return ((String) x).compareTo((String) y);
+}
+
 public int doCompare(Object x, Object y) {
 	return ((String) x).compareTo((String) y);
 }
@@ -80,7 +84,8 @@ public static String replaceLast(String str, String pattern, String replacement)
 public static Vector sort(Vector list) {
 	String[] array = new String[list.size()];
 	list.copyInto(array);
-	sun.misc.Sort.quicksort(array, new Stringx());
+	//sun.misc.Sort.quicksort(array, new Stringx());
+        java.util.Arrays.sort(array, new Stringx());
 	return Arrayx.toVector(array);
 }
 /**
@@ -90,7 +95,8 @@ public static Vector sort(Vector list) {
  * @param list java.lang.String[]
  */
 public static String[] sort(String[] list) {
-	sun.misc.Sort.quicksort(list, new Stringx());
+	// sun.misc.Sort.quicksort(list, new Stringx());
+        java.util.Arrays.sort(list, new Stringx());
 	return list;
 }
 /**

@@ -16,7 +16,7 @@ public FileNameAsc() {
 /**
  * doCompare method comment.
  */
-public int doCompare(Object arg1, Object arg2) {
+public int compare(Object arg1, Object arg2) {
 	final File f1 = (File) arg1;
 	final File f2 = (File) arg2;
 	return f1.getName().compareTo(f2.getName());

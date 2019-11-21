@@ -12,7 +12,7 @@ public class FloatAsc implements Comparator {
 public FloatAsc() {
 	super();
 }
-public int doCompare(Object arg1, Object arg2) {
+public int compare(Object arg1, Object arg2) {
 	final float v1 = ((Float) arg1).floatValue();
 	final float v2 = ((Float) arg2).floatValue();
 
